@@ -20,6 +20,7 @@ group :development do
   gem "capistrano-bundler"
   gem "capistrano3-unicorn"
   gem 'spring'
+  gem 'rename'
 end
 group :development, :test do
   gem 'rspec-rails', '~> 3.2.0.pre', github: 'rspec/rspec-rails'
