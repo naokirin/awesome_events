@@ -21,6 +21,7 @@ group :development do
   gem "capistrano3-unicorn"
   gem 'spring'
   gem 'rename'
+  gem 'bullet'
 end
 group :development, :test do
   gem 'rspec-rails', '~> 3.2.0.pre', github: 'rspec/rspec-rails'
