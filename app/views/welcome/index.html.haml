@@ -1,9 +1,20 @@
 .page-header
-  イベント一覧
+  %h1
+    イベント一覧
 .list-group
   - @events.each do |event|
     = link_to(event, class: 'list-group-item') do
-      %h4{class: "list-group-item-heading"}
-        = event.name
-      %p{class: "list-group-item-text"}
-        = event.start_time.strftime('%Y/%m/%d %H:%M') + " - " + event.end_time.strftime('%Y/%m/%d %H:%M')
+      %h3{class: "list-group-item-heading"}
+        %u
+          = event.name
+      %br
+      %p{class: "list-group-item-text text-info"}
+        TODO: 勉強会の概要
+      %span{class: "glyphicon glyphicon-user", aria: {hidden: "true"}}
+      = "@#{event.owner.nickname}"
+      = raw("&nbsp;")
+      %span{class: "glyphicon glyphicon-map-marker", aria: {hidden: "true"}}
+      = event.place
+      = raw("&nbsp;")
+      %span{class: "glyphicon glyphicon-time", aria: {hidden: "true"}}
+      = event.start_time.strftime('%Y/%m/%d %H:%M') + " - " + event.end_time.strftime('%Y/%m/%d %H:%M')
