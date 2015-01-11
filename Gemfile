@@ -26,12 +26,8 @@ group :development do
   gem 'erb2haml'
 end
 group :development, :test do
-  gem 'rspec-rails', '~> 3.2.0.pre', github: 'rspec/rspec-rails'
-  gem 'rspec-core', '~> 3.2.0.pre', github: 'rspec/rspec-core'
-  gem 'rspec-expectations', '~> 3.2.0.pre', github: 'rspec/rspec-expectations'
-  gem 'rspec-mocks', '~> 3.2.0.pre', github: 'rspec/rspec-mocks'
-  gem 'rspec-support', '~> 3.2.0.pre', github: 'rspec/rspec-support'
-  gem 'factory_girl_rails', '~> 4.4.1'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
 group :test do
   gem 'shoulda-matchers', '~> 2.6.0'
