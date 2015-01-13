@@ -25,4 +25,19 @@ RSpec.describe Event, :type => :model do
   describe '#start_time' do
     it { should validate_presence_of(:end_time) }
   end
+
+  describe '#created_by?' do
+    let(:event) { create(:event) }
+    subject { event.created_by?(user) }
+
+    context '引数がnilのとき' do
+      let(:user) { nil }
+      it { should be_falsey }
+    end
+
+    context '#owner_idと引数の#idが同じとき' do
+      let(:user) { double('user', id: event.owner_id) }
+      it { should be_truthy }
+    end
+  end
 end
