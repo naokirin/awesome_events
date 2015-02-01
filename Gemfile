@@ -17,6 +17,7 @@ gem "ransack", '~> 1.2.2'
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 3.7.0'
 gem 'haml-rails'
+gem 'kakurenbo'
 group :development do
   gem "capistrano", "3.1.0"
   gem "capistrano-rails"
